@@ -8,7 +8,7 @@ public class Main {
     public static LinkedHashMap<String, LinkedList<String>> dirList = new LinkedHashMap<>();
     public static String logFilePath = baseDir + "/temp/temp.txt";
     public static File logFile = new File(logFilePath);
-
+    public static StringBuilder log = new StringBuilder();
     public static void main(String[] args) {
         dirList.put(baseDir, new LinkedList<String>(Arrays.asList(
                 "/src", "/res", "/savegames", "/temp"
@@ -27,7 +27,6 @@ public class Main {
         )));
         runInstall();
     }
-    public static StringBuilder log = new StringBuilder();
 
     /*
     Папка jtemp на диске D должна быть создана до запуска программы
